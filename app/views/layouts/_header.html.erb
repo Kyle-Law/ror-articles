@@ -1,11 +1,11 @@
 <header>
-    <nav>
+    <nav id="nav">
         <ul class="left">
           <li class="logo">
               <%= link_to image_tag("logo.png"), root_path%>
           </li>
           <% Category.all.each do |category|%>
-            <li>
+            <li class="category-link">
               <%= link_to category.name, category_path(category.id)%>
             </li>
           <% end %>
@@ -16,7 +16,7 @@
             <li>
               <%= link_to "Add New Article", new_article_path, class: "button" %>
             </li>
-            <li>
+            <li class="username">
               <%= link_to current_user.username, current_user %>
             </li>
             <li>

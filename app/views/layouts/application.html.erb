@@ -4,13 +4,10 @@
     <title>Articles</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%# <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-    /> %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -22,6 +19,7 @@
     </div>
 
     <%= render "layouts/footer" %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </body>
 </html>

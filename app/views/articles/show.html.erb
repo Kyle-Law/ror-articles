@@ -1,14 +1,8 @@
-<div class= 'container w-50 pr-n5 pl-n5 text-article-show-page mt-2'>
-  <div class= 'img-article'>
-    <%= image_tag @article.image.url, class: 'element-show element'%>
-  </div>
-  <div class="mb-5 ">
-    <h1 class=" text-center font-weight-bold text-title mt-3 mb-5 "><%= @article.title%></h1>
-    <p class="font-weight-bolder"><%= @article.text%></p>
-  </div>
-</div>
-<div class='container upvote-downvote mb-5'>
-  <span class= 'font-weight-bold'>Author : <strong class="current-color" ><%= @article.creator.username %> </strong></span>
-  <span class= "ml-3 "><%= pluralize(@article.votes.count, 'Vote') %></span>
+<div class= 'article-show-container'>
+  <%= image_tag @article.image.url, class: ''%>
+  <h1 class=""><%= @article.title%></h1>
+  <p class=""><%= @article.text%></p>
+  <span class= ''>Author : <strong class="" ><%= @article.creator.username %> </strong></span>
+  <span class= ""><%= pluralize(@article.votes.count, 'Vote') %></span>
   <%= vote_button(@article,@vote) %>
 </div>

@@ -40,3 +40,5 @@
 yarn-debug.log*
 .yarn-integrity
 node_modules
+
+.DS_Store
