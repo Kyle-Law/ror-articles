@@ -13,6 +13,7 @@
 <div class="home-articles-container">
   <% Category.all.each do |category|%>
     <% most_recent_article = category.articles.last %>
+    <% if most_recent_article %>
       <div class="home-article-container">
       <%= link_to category_path(category.id) do %>
           <%= image_tag( most_recent_article.present? ? most_recent_article.image.url : '') %>
@@ -20,5 +21,6 @@
           <h5><%= most_recent_article.title%></h5>
       <% end %>
       </div>
-    <% end %>
+    <%end%>
+  <% end %>
 </div>
