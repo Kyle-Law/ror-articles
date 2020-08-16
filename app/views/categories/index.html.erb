@@ -2,7 +2,7 @@
   <% if @best_voted_article %>
     <div class="home-best-article-container">
     <%= link_to article_path(@best_voted_article.id) do%>
-      <%= image_tag(@best_voted_article.image.url ? @best_voted_article.image.url : '') %>
+      <%= image_tag(@best_voted_article.image.url ? @best_voted_article.image.url : 'https://images.unsplash.com/photo-1597313852821-02cbd89b71ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80') %>
       <h2 >
       <%= @best_voted_article.title %></h2>
       <p ><%= truncate(@best_voted_article.text , length: 400)%></p>
@@ -16,7 +16,7 @@
     <% if most_recent_article %>
       <div class="home-article-container">
       <%= link_to category_path(category.id) do %>
-          <%= image_tag( most_recent_article.present? ? most_recent_article.image.url : '') %>
+          <%= image_tag( most_recent_article.image.url ? most_recent_article.image.url : 'https://images.unsplash.com/photo-1597313852821-02cbd89b71ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80') %>
           <h2 ><%= category.name %></h2>
           <h5><%= most_recent_article.title%></h5>
       <% end %>

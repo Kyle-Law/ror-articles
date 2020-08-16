@@ -1,5 +1,5 @@
 <div class= 'article-show-container'>
-  <%= image_tag @article.image.url, class: ''%>
+  <%= image_tag( @article.image.url ? most_recent_article.image.url : 'https://images.unsplash.com/photo-1597313852821-02cbd89b71ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80') %>
   <h1 class=""><%= @article.title%></h1>
   <p class=""><%= @article.text%></p>
   <span class= ''>Author : <strong class="" ><%= @article.creator.username %> </strong></span>
