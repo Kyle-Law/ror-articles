@@ -1,0 +1,25 @@
+
+<h1><%= @title %></h1>
+
+<% @articles.each do |article| %>
+  <section class="article">
+    <div class="summary">
+      <h2>
+        <%= link_to article.title, article_path(article) %>
+      </h2>
+      <%= image_tag article.image.url%>
+      <p>
+        <%= truncate(article.text, length: 150, separator: ' ') %>
+      </p>
+      <span class= "ml-3 "><%= pluralize(article.votes.count, 'Vote') %></span>
+
+      <p>
+        Created by 
+        <strong><%= article.creator.username %></strong>,
+        <%= time_ago_in_words(article.created_at) %> ago<%= %> 
+      </p>
+
+    </div>
+  </section>
+<% end %>
+

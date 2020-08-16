@@ -1,0 +1,24 @@
+<div >
+  <% if @best_voted_article %>
+    <%= image_tag(@best_voted_article.image.url ? @best_voted_article.image.url : '') %>
+    <h6 >
+    <%= @best_voted_article.title ? @best_voted_article.title : '' %></h6>
+    <p >
+      <%= truncate(@best_voted_article.text , length: 400)%>
+    </p>
+  <% end %>
+</div>
+<div >
+  <% Category.all.each do |category|%>
+    <% most_recent_article = category.articles.last %>
+    <div >
+      <div >
+        <%= image_tag( most_recent_article.present? ? most_recent_article.image.url : '') %>
+      </div>
+      <%= link_to category_path(category.id) do %>
+          <h3 ><%= category.name %></h3>
+          <p><%= most_recent_article.present? ? most_recent_article.title : '' %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,35 @@
+<header>
+    <nav>
+        <ul class="left">
+          <li class="logo">
+              <%= link_to image_tag("logo.png"), root_path%>
+          </li>
+          <% Category.all.each do |category|%>
+            <li>
+              <%= link_to category.name, category_path(category.id)%>
+            </li>
+          <% end %>
+          
+        </ul>
+        <ul class="right">
+          <% if current_user %>
+            <li>
+              <%= link_to "Add New Article", new_article_path, class: "button" %>
+            </li>
+            <li>
+              <%= link_to current_user.username, current_user %>
+            </li>
+            <li>
+              <%= link_to "Sign Out", session_path, method: :delete,class: "button" %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Sign In", signin_path, class: "button" %>
+            </li>
+            <li>
+              <%= link_to "Sign Up", signup_path, class: "button" %>
+            </li>
+          <% end %>
+        </ul>
+    </nav>
+</header>

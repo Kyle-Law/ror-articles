@@ -1,0 +1,8 @@
+<%= form_with(model: user, local: true) do |f| %>
+  <%= render "shared/errors", object: user %>
+  
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: "username" %>
+
+  <%= f.submit "Create Account" %>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="articles">
+  <% @category_articles.each do |article| %>
+    <%= link_to article_path(article) do %>
+      <div>
+        <%= image_tag(article.image.url) %>
+      </div>
+      <h4><%= @category.name %></h4>
+      <h4 ><%= truncate(article.title, length: 40) %></h4>
+      <p><%= truncate(article.text, length: 300) %></p>
+      <%= pluralize(article.votes.count, 'vote') %> 
+    <% end %>
+  <% end %>
+</div>
