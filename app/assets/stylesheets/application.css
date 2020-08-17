@@ -127,6 +127,13 @@ nav {
   box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 1);
 }
 
+.field_with_errors input,
+.field_with_errors textarea,
+.field_with_errors select,
+.field_with_errors input {
+  width: 100%;
+}
+
 .category-show-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 600px));

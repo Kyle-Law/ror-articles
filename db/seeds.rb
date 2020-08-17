@@ -10,5 +10,5 @@ User.create(username:'Kyle')
 
 ['HTML/CSS','Ruby/Rails','JavaScript','React'].each_with_index do |category,index|
   Category.create(name: category, priority: index+1 );
-  Article.create!(title:"Here is a title for #{category}",text:"Here is a random description text for #{category}",category_id:index+1,creator_id:1,image:'https://images.unsplash.com/photo-1597313852821-02cbd89b71ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
+  Article.create!(title:"Here is a title for #{category}",text:"Here is a random description text for #{category}",category_id:index+1,creator_id:1)
 end

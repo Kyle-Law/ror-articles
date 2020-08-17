@@ -32,6 +32,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/application.yml
+/config/cloudinary.yml
+/config/initializers/cloudinary.rb
+
 
 /public/packs
 /public/packs-test
@@ -42,3 +46,6 @@ yarn-debug.log*
 node_modules
 
 .DS_Store
+# Ignore application configuration
+/config/application.yml
+/config/cloudinary.yml
