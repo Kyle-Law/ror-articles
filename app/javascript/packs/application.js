@@ -15,7 +15,7 @@ require("channels");
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-/* Dark-Light-Mode Toggle
+// Dark-Light-Mode Toggle
 console.log("reset js");
 var toggleSwitch = document.querySelector('input[type="checkbox"]');
 var nav = document.getElementById("nav");
@@ -68,4 +68,3 @@ if (currentTheme) {
     darkMode();
   }
 }
-*/

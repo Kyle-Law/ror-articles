@@ -12,6 +12,17 @@
           
         </ul>
         <ul class="right">
+          <!-- Dark Mode Switch -->
+          <div class="theme-switch-wrapper">
+            <span id="toggle-icon">
+              <span class="toggle-text">Light Mode</span>
+              <i class="fas fa-sun"></i>
+            </span>
+            <label class="theme-switch">
+              <input type="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
           <% if current_user %>
             <li>
               <%= link_to "Add New Article", new_article_path, class: "button" %>
