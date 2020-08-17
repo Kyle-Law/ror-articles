@@ -12,7 +12,7 @@ This project is built with Ruby On Rails and a little JavaScript.
 
 ## Live Link
 
-Click [HERE](https://kyle-articles.herokuapp.com/) for the live link :){:target="\_blank"}
+Click [HERE](https://kyle-articles.herokuapp.com/){:target="\_blank"} for the live link :)
 
 ## Project Snapshots
 
