@@ -12,6 +12,7 @@ class SignIn
   def fill_in_article_form(params = {})
     fill_in('article_title', with: params.fetch(:title, 'Test Title'))
     fill_in('article_text', with: 'Here is a 10 words description about article')
+    click_on('Select A Category', with: 'Here is a 10 words description about article')
   end
 
   def create_article

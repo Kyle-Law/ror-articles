@@ -9,41 +9,27 @@ feature 'After Sign Up' do
 
     expect(page).to have_link 'test_user'
     expect(page).to have_link 'Sign Out'
-    expect(page).to have_link 'Add New Event'
+    expect(page).to have_link 'Add New Article'
   end
 
-  scenario 'Clicking Add New Event' do
+  scenario 'Clicking Add New Article' do
     new_user.sign_in('test_user')
 
-    click_on 'Add New Event'
+    click_on 'Add New Article'
 
-    expect(page).to have_content 'Create a New Event'
-    expect(page).to have_button 'Create Event'
+    expect(page).to have_content 'Create a New Article'
+    expect(page).to have_button 'Create Article'
   end
 
-  scenario 'Create new event' do
+  scenario 'Vote button switch' do
     new_user.sign_in('test_user')
 
-    click_on 'Add New Event'
+    visit('/articles/1')
 
-    new_user.fill_in_event_form(
-      title: 'Test Title'
-    )
+    expect(page).to have_button 'Vote'
 
-    click_button 'Create Event'
-    expect(page).to have_content 'Upcoming Events'
-    expect(page).to have_link 'Test Title'
-  end
+    click_button 'Vote'
 
-  scenario 'Registration button switch' do
-    new_user.sign_in('test_user')
-
-    visit('/events/5')
-
-    expect(page).to have_button 'Register Now'
-
-    click_button 'Register Now'
-
-    expect(page).to have_button 'Unregister'
+    expect(page).to have_button 'Unvote'
   end
 end

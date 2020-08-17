@@ -8,25 +8,22 @@ feature 'visit root page' do
     expect(page).to have_link 'Sign Up'
   end
 
-  scenario "see 'Upcoming' and 'Past' links" do
+  scenario "see each category's links and if data is seeded" do
     visit('/')
 
-    expect(page).to have_link 'Upcoming'
-    expect(page).to have_link 'Past'
+    expect(page).to have_link 'HTML/CSS'
+    expect(page).to have_link 'Ruby/Rails'
+    expect(page).to have_link 'JavaScript'
+    expect(page).to have_link 'React'
+
   end
 
-  scenario 'check if data is seeded' do
-    visit('/')
+  scenario "redirect to sign_in when clicking 'Vote' of article#show page" do
+    visit('/articles/1')
 
-    expect(page).to have_link 'Deep work - transform your life'
-  end
+    expect(page).to have_button 'Vote'
 
-  scenario "redirect to sign_in when clicking 'Register' of event#show page" do
-    visit('/events/5')
-
-    expect(page).to have_button 'Register Now'
-
-    click_button 'Register Now'
+    click_button 'Vote'
 
     expect(page).to have_content 'Please sign in first!'
   end
