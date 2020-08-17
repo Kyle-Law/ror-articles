@@ -10,9 +10,10 @@ It's inspired by Microverse's curriculum structures, where students have to writ
 
 This project is built with Ruby On Rails and a little JavaScript.
 
-## Live Link
+## Live Links & Walkthrough Video
 
-Click [HERE](https://kyle-articles.herokuapp.com/) for the live link :)
+[Live Link](https://kyle-articles.herokuapp.com/)
+[Walkthrough Video](https://youtu.be/Udy5I8B3gSM)
 
 ## Project Snapshots
 
