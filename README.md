@@ -17,7 +17,7 @@ This project is built with Ruby On Rails and a little JavaScript.
 
 ## Project Snapshots
 
-![image](https://user-images.githubusercontent.com/55923773/90416798-857e4900-e0e5-11ea-8aac-301aaa7a1b67.png)
+![image](https://user-images.githubusercontent.com/55923773/90429568-8cfb1d80-e0f8-11ea-8d2c-b106dbdf5d13.png)
 
 ## Built With
 
