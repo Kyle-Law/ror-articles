@@ -1,9 +1,9 @@
 <div >
-  <h1>Featured</h1>
+  <h1 class="home-title">Featured</h1>
   <% if @best_voted_article %>
     <div class="home-best-article-container">
     <%= link_to article_path(@best_voted_article.id) do%>
-      <%= image_tag(@best_voted_article.image.url ? @best_voted_article.image.url : 'https://images.unsplash.com/photo-1597313852821-02cbd89b71ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80') %>
+      <%= image_tag(@best_voted_article.image.url ? @best_voted_article.image.url : random_image(@best_voted_article.category_id)) %>
       <h2 >
       <%= @best_voted_article.title %></h2>
       <p ><%= truncate(@best_voted_article.text , length: 400)%></p>
@@ -11,13 +11,15 @@
     </div>
   <% end %>
 </div>
+
+<h2 class="home-subtitle">Categories</h2>
 <div class="home-articles-container">
   <% Category.all.each do |category|%>
     <% most_recent_article = category.articles.last %>
     <% if most_recent_article %>
       <div class="home-article-container">
       <%= link_to category_path(category.id) do %>
-          <%= image_tag( most_recent_article.image.url ? most_recent_article.image.url : 'https://images.unsplash.com/photo-1597313852821-02cbd89b71ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80') %>
+          <%= image_tag( most_recent_article.image.url ? most_recent_article.image.url : random_image(category.id)) %>
           <h2 ><%= category.name %></h2>
           <h5><%= most_recent_article.title%></h5>
       <% end %>

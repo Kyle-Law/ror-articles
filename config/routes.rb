@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resource :session, only: %i[create destroy]
   get 'signin' => 'sessions#new'
+  get 'signout' => 'sessions#destroy'
   get 'signup' => 'users#new'
 
 end

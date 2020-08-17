@@ -29,7 +29,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -89,14 +90,18 @@ a:hover {
 
 .content {
   padding: 0 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 nav {
   display: grid;
   grid-auto-flow: column;
-  margin-right: 20px;
   border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+ul {
+  padding: 5px 20px;
 }
 
 .left,
@@ -141,6 +146,11 @@ footer {
   width: 100%;
 }
 
+.home-title,
+.home-subtitle {
+  text-align: center;
+}
+
 .home-best-article-container a {
   display: grid;
   grid-template-rows: 400px 4rem max-content;
@@ -151,6 +161,7 @@ footer {
   padding: 30px;
   color: var(--on-background);
   background-color: var(--background);
+  margin-bottom: 20px;
 }
 
 .home-article-container a {
@@ -179,8 +190,9 @@ footer {
 }
 
 footer a:hover {
-  border: 1px solid var(--on-background);
+  border: 1px solid var(--background);
   transform: rotateX(15deg);
+  color: var(--background);
 }
 
 .home-best-article-container a:hover {
@@ -249,6 +261,10 @@ footer a:hover {
 .field_with_errors textarea,
 .field_with_errors select {
   width: 100%;
+}
+
+.flash.notice {
+  color: #121212;
 }
 
 .category-show-container {
