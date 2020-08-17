@@ -15,7 +15,6 @@ feature 'visit root page' do
     expect(page).to have_link 'Ruby/Rails'
     expect(page).to have_link 'JavaScript'
     expect(page).to have_link 'React'
-
   end
 
   scenario "redirect to sign_in when clicking 'Vote' of article#show page" do

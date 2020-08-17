@@ -11,6 +11,5 @@ RSpec.describe Article, type: :model do
     it { should have_many :votes }
     it { should belong_to :creator }
     it { should belong_to :category }
-
   end
 end
