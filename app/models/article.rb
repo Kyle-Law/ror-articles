@@ -8,8 +8,6 @@ class Article < ApplicationRecord
   validates :title, length: { minimum: 5 }
   validates :text, length: { minimum: 10 }
 
-  scope :recent_articles, -> { order(created_at: :desc) }
-
   def self.best_voted_article
     Article.all.max_by { |a| a.votes.count }
   end

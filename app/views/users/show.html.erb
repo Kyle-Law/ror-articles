@@ -4,9 +4,9 @@
     <p>
         <%= @user.created_at.strftime("%B %Y") %>
     </p>
-      <% if @articles.present? %>
+      <% @articles = @user.articles %>
+      <% if @articles %>
         <h3>Created <%= pluralize(@articles.size, "article") %></h3>
-        <% if @articles.present? %>
           <div class="created-articles">
             <ul>
                 <% @articles.each do |e| %>
@@ -16,28 +16,5 @@
                 <% end %>
             </ul>
           </div>
-        <% end %>
-      <% end %>
-      <% if @registrations.present? %>
-        <h3>Attending <%= pluralize(@upcoming_articles.size, "article") %></h3>
-        <div class="attending-articles">
-          <ul>
-            <% @upcoming_articles.each do |r| %>
-              <li>
-                <%= link_to r.article.title, r.article %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-        <h3>Attended <%= pluralize(@prev_articles.size, "article") %></h3>
-        <div class="attending-articles">
-          <ul>
-            <% @prev_articles.each do |r| %>
-              <li>
-                <%= link_to r.article.title, r.article %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
       <% end %>
 </section>

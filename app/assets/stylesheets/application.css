@@ -138,12 +138,22 @@ ul {
 
 footer {
   background: var(--on-background);
-  padding: 5px;
+  padding: 10px 20px;
   color: var(--background);
-  text-align: right;
   position: fixed;
   bottom: 0;
   width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+footer button:hover {
+  color: var(--on-background);
+  background: var(--background);
 }
 
 .home-title,
@@ -191,7 +201,6 @@ footer {
 
 footer a:hover {
   border: 1px solid var(--background);
-  transform: rotateX(15deg);
   color: var(--background);
 }
 

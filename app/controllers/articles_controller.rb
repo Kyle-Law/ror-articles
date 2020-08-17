@@ -1,10 +1,7 @@
 class ArticlesController < ApplicationController
-  def index
-    @articles = Article.all
-  end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.includes(:creator).find(params[:id])
     @vote = current_user.votes.find_by(article_id: @article.id) if current_user
   end
 

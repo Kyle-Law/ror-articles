@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @articles = @user.articles
+    @user = User.includes(:articles).find(params[:id])
   end
 
   def new

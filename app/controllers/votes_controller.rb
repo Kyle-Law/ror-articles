@@ -4,7 +4,6 @@ class VotesController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
     @article.votes.create!(user: current_user)
-    # current_user.votes.create(article_id: @article.id)
 
     redirect_to @article
   end
