@@ -13,7 +13,7 @@ This project is built with Ruby On Rails and a little JavaScript.
 ## Live Links & Walkthrough Video
 
 [Live Link](https://kyle-articles.herokuapp.com/)
-[Walkthrough Video](https://youtu.be/Udy5I8B3gSM)
+[Walkthrough Video](https://youtu.be/Udy5I8B3gSM), [N+1 Issue](https://www.sitepoint.com/silver-bullet-n1-problem/) is explained on 5:35 of the video
 
 ## Project Snapshots
 
