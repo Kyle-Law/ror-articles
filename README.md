@@ -12,11 +12,11 @@ This project is built with Ruby On Rails and a little JavaScript.
 
 ## Live Link
 
-Click [HERE](https://kyle-articles.herokuapp.com/){:target="\_blank"} for the live link :)
+Click [HERE](https://kyle-articles.herokuapp.com/) for the live link :)
 
 ## Project Snapshots
 
-![image](https://user-images.githubusercontent.com/55923773/80931634-d051aa80-8ded-11ea-9a8c-7dac9641bae5.png)
+![image](https://user-images.githubusercontent.com/55923773/90416798-857e4900-e0e5-11ea-8aac-301aaa7a1b67.png)
 
 ## Built With
 
@@ -48,9 +48,9 @@ Click [HERE](https://kyle-articles.herokuapp.com/){:target="\_blank"} for the li
 
 👤 **Kyle Law**
 
-- Github: [@Kyle-Law](https://github.com/Kyle-Law){:target="\_blank"}
-- Twitter: [@Kyle-Law](https://twitter.com/ZhunKhing){:target="\_blank"}
-- Linkedin: [Kyle law](https://www.linkedin.com/in/kyle-lawzhunkhing/){:target="\_blank"}
+- Github: [@Kyle-Law](https://github.com/Kyle-Law)
+- Twitter: [@Kyle-Law](https://twitter.com/ZhunKhing)
+- Linkedin: [Kyle law](https://www.linkedin.com/in/kyle-lawzhunkhing/)
 
 ## 🤝 Contributing
 
@@ -63,7 +63,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio){:target="\_blank"}
+- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 License
 
