@@ -21,7 +21,7 @@
       <%= link_to category_path(category.id) do %>
           <%= image_tag( most_recent_article.image.url ? most_recent_article.image.url : random_image(category.id)) %>
           <h2 ><%= category.name %></h2>
-          <h5><%= most_recent_article.title%></h5>
+          <h5><%= truncate(most_recent_article.title,length:20)%></h5>
       <% end %>
       </div>
     <%end%>

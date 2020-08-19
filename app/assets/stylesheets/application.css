@@ -177,7 +177,7 @@ footer button:hover {
 
 .home-article-container a {
   display: grid;
-  grid-template-rows: 350px 30px max-content;
+  grid-template-rows: 30px 250px max-content;
   transition: 0.3s;
   grid-gap: 8px;
   border-radius: 15px;
@@ -185,6 +185,10 @@ footer button:hover {
   padding: 15px;
   color: var(--on-background);
   background-color: var(--background);
+}
+
+.home-article-container h2 {
+  grid-row: 1;
 }
 
 .category-show-container a {
@@ -201,14 +205,14 @@ footer button:hover {
   height: 350px;
 }
 
-.category-show-container a:nth-child(4n),
-.category-show-container a:nth-child(4n-1) {
-  direction: rtl;
-}
-
 footer a:hover {
   border: 1px solid var(--background);
   color: var(--background);
+}
+
+.category-show-container a:nth-child(4n),
+.category-show-container a:nth-child(4n-1) {
+  direction: rtl;
 }
 
 .home-best-article-container a:hover {
