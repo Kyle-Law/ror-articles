@@ -1,0 +1,44 @@
+@import "bootstrap";
+
+// Flashes
+
+.flash {
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+
+  &.notice {
+    background: greenyellow;
+    padding: 10px 0;
+  }
+
+  &.alert {
+    background: rgb(252, 161, 50);
+    padding: 10px 0;
+    color: white;
+  }
+
+  &.danger {
+    background-color: #ffa715;
+  }
+}
+
+// Errors
+
+section.errors {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  background: lightgreen;
+
+  h2 {
+    color: red;
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+}

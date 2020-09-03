@@ -1,0 +1,20 @@
+<section class="user">
+    <h1><%= @user.username %></h1>
+    <h3>Member Since</h3>
+    <p>
+        <%= @user.created_at.strftime("%B %Y") %>
+    </p>
+      <% @articles = @user.articles %>
+      <% if @articles %>
+        <h3>Created <%= pluralize(@articles.size, "article") %></h3>
+          <div class="created-articles">
+            <ul>
+                <% @articles.each do |e| %>
+                  <li>
+                    <%= link_to e.title, e %>
+                  </li>
+                <% end %>
+            </ul>
+          </div>
+      <% end %>
+</section>

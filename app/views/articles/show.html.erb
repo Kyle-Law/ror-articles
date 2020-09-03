@@ -1,0 +1,8 @@
+<div class= 'article-show-container'>
+  <%= image_tag( @article.image.url ? @article.image.url : random_image(@article.category_id)) %>
+  <h1 class=""><%= @article.title%></h1>
+  <p class=""><%= @article.text%></p>
+  <span class= ''>Author : <strong class="" ><%= @article.creator.username %> </strong></span>
+  <span class= ""><%= pluralize(@article.votes.count, 'Vote') %></span>
+  <%= vote_button(@article,@vote) %>
+</div>

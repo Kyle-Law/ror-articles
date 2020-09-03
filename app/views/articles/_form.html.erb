@@ -1,0 +1,19 @@
+<%= form_with(model: article, local: true) do |f| %>
+  <%= render "shared/errors", object: article %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, autofocus: true %>
+
+  <%= f.label :text %>
+  <%= f.text_area :text, rows: 10 %>
+
+  <%= f.collection_select :category_id, Category.all, :id, :name,{prompt: "Select A Category"} %>
+  
+  <%# <fieldset> %>
+    <%= f.label :image %>
+    <%= f.hidden_field :image_cache %>
+    <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+  <%# </fieldset> %>
+
+  <%= f.submit %>
+<% end %>
